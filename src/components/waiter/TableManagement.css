@@ -1,0 +1,134 @@
+.table-management {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    border-radius: var(--radius-lg);
+    overflow-x: auto;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.filter-btn.active {
+    background: var(--surface-light);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.ml-2 {
+    margin-left: 8px;
+}
+
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    padding-bottom: 24px;
+}
+
+.table-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 4px solid transparent;
+}
+
+.table-card:hover {
+    transform: translateY(-4px);
+}
+
+.table-card.status-available {
+    border-top-color: var(--success);
+}
+
+.table-card.status-occupied {
+    border-top-color: var(--danger);
+}
+
+.table-card.status-reserved {
+    border-top-color: var(--warning);
+}
+
+.table-card.status-cleaning {
+    border-top-color: var(--info);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.table-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.text-warning {
+    color: var(--warning);
+}
+
+.order-value {
+    margin-left: auto;
+    font-weight: 700;
+    color: var(--success);
+    font-size: 1.1rem;
+}
+
+.table-actions {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.action-text {
+    font-weight: 600;
+    color: var(--text-dim);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.table-card:hover .action-text {
+    color: var(--primary);
+}

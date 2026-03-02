@@ -1,0 +1,181 @@
+.inventory-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    width: 280px;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    font-family: inherit;
+    outline: none;
+}
+
+.alerts-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.alert-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    border-left: 4px solid var(--danger);
+}
+
+.danger-alert {
+    background: rgba(255, 51, 102, 0.05);
+    color: var(--danger);
+    border-color: var(--danger);
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-content h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+}
+
+.alert-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.inventory-table-card {
+    overflow-x: auto;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.inventory-table th {
+    padding: 16px 24px;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+}
+
+.inventory-table td {
+    padding: 16px 24px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s;
+}
+
+.inventory-table tbody tr {
+    transition: all 0.2s;
+}
+
+.inventory-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.inventory-table tbody tr:hover td {
+    backdrop-filter: blur(4px);
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-dim {
+    color: var(--text-dim);
+}
+
+.stock-level-display {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.qty-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.text-warning {
+    color: var(--warning);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.text-right {
+    text-align: right;
+}
+
+.table-actions-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.icon-btn:hover {
+    background: var(--surface-light);
+    color: white;
+}
+
+.icon-btn.text-danger:hover {
+    background: var(--danger-bg);
+    color: var(--danger);
+}

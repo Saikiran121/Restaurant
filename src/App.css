@@ -1,0 +1,4 @@
+/* Removed default Vite App.css content */
+.text-muted {
+  color: var(--text-muted);
+}
