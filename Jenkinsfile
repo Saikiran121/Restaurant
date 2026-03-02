@@ -20,5 +20,17 @@ pipeline {
                 sh 'npm run lint'
             }
         }
+
+        stage("Unit tests") {
+            steps {
+                sh 'npm run test'
+            }
+
+            post {
+                always {
+                    junit 'reports/*.xml'
+                }
+            }
+        }
     }
 }
